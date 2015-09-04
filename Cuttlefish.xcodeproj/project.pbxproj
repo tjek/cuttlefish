@@ -14,6 +14,11 @@
 		AE6685EC1B9625B800B18EEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE6685EB1B9625B800B18EEC /* Images.xcassets */; };
 		AE6685EF1B9625B800B18EEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6685ED1B9625B800B18EEC /* LaunchScreen.xib */; };
 		AE6685FB1B9625B800B18EEC /* CuttlefishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6685FA1B9625B800B18EEC /* CuttlefishTests.m */; };
+		AE66860F1B97251500B18EEC /* ColorPaletteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE66860E1B97251500B18EEC /* ColorPaletteTableViewCell.m */; };
+		AEECF07F1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF07E1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m */; };
+		AEECF0831B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */; };
+		AEECF0841B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */; };
+		AEECF08A1B998C2A0007C5D4 /* UIColor+SGN_Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		AE6685F41B9625B800B18EEC /* CuttlefishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuttlefishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6685F91B9625B800B18EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE6685FA1B9625B800B18EEC /* CuttlefishTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CuttlefishTests.m; sourceTree = "<group>"; };
+		AE66860D1B97251500B18EEC /* ColorPaletteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPaletteTableViewCell.h; sourceTree = "<group>"; };
+		AE66860E1B97251500B18EEC /* ColorPaletteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPaletteTableViewCell.m; sourceTree = "<group>"; };
+		AEECF07D1B9986A50007C5D4 /* UIColor+SGN_FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_FlatColors.h"; sourceTree = "<group>"; };
+		AEECF07E1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_FlatColors.m"; sourceTree = "<group>"; };
+		AEECF0811B99896F0007C5D4 /* UIColor+SGN_ColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_ColorPalette.h"; sourceTree = "<group>"; };
+		AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_ColorPalette.m"; sourceTree = "<group>"; };
+		AEECF0871B998C2A0007C5D4 /* UIColor+SGN_Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_Hex.h"; sourceTree = "<group>"; };
+		AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +76,8 @@
 		AE6685D21B9625B800B18EEC = {
 			isa = PBXGroup;
 			children = (
-				AE6685DD1B9625B800B18EEC /* Cuttlefish */,
+				AEECF0801B99896F0007C5D4 /* Cuttlefish */,
+				AE6685DD1B9625B800B18EEC /* Cuttlefish Example */,
 				AE6685F71B9625B800B18EEC /* CuttlefishTests */,
 				AE6685DC1B9625B800B18EEC /* Products */,
 			);
@@ -78,19 +92,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE6685DD1B9625B800B18EEC /* Cuttlefish */ = {
+		AE6685DD1B9625B800B18EEC /* Cuttlefish Example */ = {
 			isa = PBXGroup;
 			children = (
 				AE6685E21B9625B800B18EEC /* AppDelegate.h */,
 				AE6685E31B9625B800B18EEC /* AppDelegate.m */,
 				AE6685E51B9625B800B18EEC /* ViewController.h */,
 				AE6685E61B9625B800B18EEC /* ViewController.m */,
+				AE66860D1B97251500B18EEC /* ColorPaletteTableViewCell.h */,
+				AE66860E1B97251500B18EEC /* ColorPaletteTableViewCell.m */,
+				AEECF07D1B9986A50007C5D4 /* UIColor+SGN_FlatColors.h */,
+				AEECF07E1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m */,
 				AE6685E81B9625B800B18EEC /* Main.storyboard */,
 				AE6685EB1B9625B800B18EEC /* Images.xcassets */,
 				AE6685ED1B9625B800B18EEC /* LaunchScreen.xib */,
 				AE6685DE1B9625B800B18EEC /* Supporting Files */,
 			);
-			path = Cuttlefish;
+			path = "Cuttlefish Example";
 			sourceTree = "<group>";
 		};
 		AE6685DE1B9625B800B18EEC /* Supporting Files */ = {
@@ -107,6 +125,8 @@
 			children = (
 				AE6685FA1B9625B800B18EEC /* CuttlefishTests.m */,
 				AE6685F81B9625B800B18EEC /* Supporting Files */,
+				AEECF0871B998C2A0007C5D4 /* UIColor+SGN_Hex.h */,
+				AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */,
 			);
 			path = CuttlefishTests;
 			sourceTree = "<group>";
@@ -117,6 +137,15 @@
 				AE6685F91B9625B800B18EEC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEECF0801B99896F0007C5D4 /* Cuttlefish */ = {
+			isa = PBXGroup;
+			children = (
+				AEECF0811B99896F0007C5D4 /* UIColor+SGN_ColorPalette.h */,
+				AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */,
+			);
+			path = Cuttlefish;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +250,10 @@
 			files = (
 				AE6685E71B9625B800B18EEC /* ViewController.m in Sources */,
 				AE6685E41B9625B800B18EEC /* AppDelegate.m in Sources */,
+				AEECF0831B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */,
+				AEECF07F1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m in Sources */,
 				AE6685E11B9625B800B18EEC /* main.m in Sources */,
+				AE66860F1B97251500B18EEC /* ColorPaletteTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEECF0841B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */,
 				AE6685FB1B9625B800B18EEC /* CuttlefishTests.m in Sources */,
+				AEECF08A1B998C2A0007C5D4 /* UIColor+SGN_Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +383,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Cuttlefish/Info.plist;
+				INFOPLIST_FILE = "Cuttlefish Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +394,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Cuttlefish/Info.plist;
+				INFOPLIST_FILE = "Cuttlefish Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +454,7 @@
 				AE6686001B9625B800B18EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6686011B9625B800B18EEC /* Build configuration list for PBXNativeTarget "CuttlefishTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +463,7 @@
 				AE6686031B9625B800B18EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
