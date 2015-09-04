@@ -19,6 +19,7 @@
 		AEECF0831B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */; };
 		AEECF0841B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */; };
 		AEECF08A1B998C2A0007C5D4 /* UIColor+SGN_Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */; };
+		AEECF08C1B99AA100007C5D4 /* CuttlefishLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEECF08B1B99AA0F0007C5D4 /* CuttlefishLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_ColorPalette.m"; sourceTree = "<group>"; };
 		AEECF0871B998C2A0007C5D4 /* UIColor+SGN_Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_Hex.h"; sourceTree = "<group>"; };
 		AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_Hex.m"; sourceTree = "<group>"; };
+		AEECF08B1B99AA0F0007C5D4 /* CuttlefishLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CuttlefishLogo.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		AE6685DE1B9625B800B18EEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEECF08B1B99AA0F0007C5D4 /* CuttlefishLogo.png */,
 				AE6685DF1B9625B800B18EEC /* Info.plist */,
 				AE6685E01B9625B800B18EEC /* main.m */,
 			);
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6685EA1B9625B800B18EEC /* Main.storyboard in Resources */,
+				AEECF08C1B99AA100007C5D4 /* CuttlefishLogo.png in Resources */,
 				AE6685EF1B9625B800B18EEC /* LaunchScreen.xib in Resources */,
 				AE6685EC1B9625B800B18EEC /* Images.xcassets in Resources */,
 			);
