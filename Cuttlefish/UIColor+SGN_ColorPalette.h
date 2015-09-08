@@ -43,9 +43,6 @@ typedef NS_ENUM(NSUInteger, SGN_ColorPaletteShade)
 + (UIColor*) sgn_disabledTextColorOnLight:(BOOL)lightBG;
 
 
-// Based on the `sg_luminance`, and used by the `sgn_...TextColor` utilities
-// The tipping-point is tweaked to make text look good on backgrounds
-- (BOOL) sgn_isLightColor;
 
 
 
@@ -57,5 +54,12 @@ typedef NS_ENUM(NSUInteger, SGN_ColorPaletteShade)
 
 - (BOOL) sgn_isDarkerThanColor:(UIColor*)otherColor;
 - (BOOL) sgn_isLighterThanColor:(UIColor*)otherColor;
+
+// Based on the `sg_luminance`, and used by the `sgn_...TextColor` utilities
+// The tipping-point is tweaked to make text look good on backgrounds
+- (BOOL) sgn_isAlmostWhiteColor;
+- (BOOL) sgn_isVeryLightColor;
+- (BOOL) sgn_isLightColor;
+- (BOOL) sgn_isAlmostBlackColor;
 
 @end
