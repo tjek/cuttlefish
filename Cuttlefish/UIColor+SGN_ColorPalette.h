@@ -38,6 +38,10 @@ typedef NS_ENUM(NSUInteger, SGN_ColorPaletteShade)
 @property (nonatomic, readonly) UIColor* sgn_secondaryTextColor;
 @property (nonatomic, readonly) UIColor* sgn_disabledTextColor;
 
++ (UIColor*) sgn_primaryTextColorOnLight:(BOOL)lightBG;
++ (UIColor*) sgn_secondaryTextColorOnLight:(BOOL)lightBG;
++ (UIColor*) sgn_disabledTextColorOnLight:(BOOL)lightBG;
+
 
 // Based on the `sg_luminance`, and used by the `sgn_...TextColor` utilities
 // The tipping-point is tweaked to make text look good on backgrounds
@@ -51,6 +55,7 @@ typedef NS_ENUM(NSUInteger, SGN_ColorPaletteShade)
 - (BOOL) sgn_isEqualToColor:(UIColor *)otherColor;
 - (BOOL) sgn_isEqualToColor:(UIColor *)otherColor withTolerance:(CGFloat)tolerance;
 
+- (BOOL) sgn_isDarkerThanColor:(UIColor*)otherColor;
+- (BOOL) sgn_isLighterThanColor:(UIColor*)otherColor;
+
 @end
-
-

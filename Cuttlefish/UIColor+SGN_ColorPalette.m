@@ -137,21 +137,36 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
 
 
 
+
+
+#pragma mark - Text Color
+
++ (UIColor*) sgn_primaryTextColorOnLight:(BOOL)lightBG
+{
+    return lightBG ? [UIColor colorWithWhite:0 alpha:0.87] : [UIColor colorWithWhite:1 alpha:1.0];
+}
++ (UIColor*) sgn_secondaryTextColorOnLight:(BOOL)lightBG
+{
+    return lightBG ? [UIColor colorWithWhite:0 alpha:0.54] : [UIColor colorWithWhite:1 alpha:0.7];
+}
++ (UIColor*) sgn_disabledTextColorOnLight:(BOOL)lightBG
+{
+    return lightBG ? [UIColor colorWithWhite:0 alpha:0.38] : [UIColor colorWithWhite:1 alpha:0.3];
+}
+
+
 // depending on the brightness of the color, either black or white text with varying alpha values
 - (UIColor*) sgn_primaryTextColor
 {
-    // (0, 0, 0, 0.87) or (1, 1, 1, 1)
-    return [self sgn_isLightColor] ? [UIColor colorWithWhite:0 alpha:0.87] : [UIColor colorWithWhite:1 alpha:1.0];
+    return [self.class sgn_primaryTextColorOnLight:[self sgn_isLightColor]];
 }
 - (UIColor*) sgn_secondaryTextColor
 {
-    // (0, 0, 0, 0.54) or (1, 1, 1, 0.7)
-    return [self sgn_isLightColor] ? [UIColor colorWithWhite:0 alpha:0.54] : [UIColor colorWithWhite:1 alpha:0.7];
+    return [self.class sgn_secondaryTextColorOnLight:[self sgn_isLightColor]];
 }
 - (UIColor*) sgn_disabledTextColor
 {
-    // (0, 0, 0, 0.38) or (1, 1, 1, 0.3)
-    return [self sgn_isLightColor] ? [UIColor colorWithWhite:0 alpha:0.38] : [UIColor colorWithWhite:1 alpha:0.3];
+    return [self.class sgn_disabledTextColorOnLight:[self sgn_isLightColor]];
 }
 
 
@@ -199,6 +214,14 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
     fabs(g1 - g2) <= tolerance &&
     fabs(b1 - b2) <= tolerance &&
     fabs(a1 - a2) <= tolerance;
+}
+- (BOOL) sgn_isDarkerThanColor:(UIColor*)otherColor
+{
+    return self.sgn_luminance < otherColor.sgn_luminance;
+}
+- (BOOL) sgn_isLighterThanColor:(UIColor*)otherColor
+{
+    return self.sgn_luminance > otherColor.sgn_luminance;
 }
 
 
