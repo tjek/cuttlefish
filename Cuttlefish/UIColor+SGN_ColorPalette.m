@@ -224,9 +224,10 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
     return self.sgn_luminance > otherColor.sgn_luminance;
 }
 
-- (BOOL) sgn_isLightColor
+
+- (BOOL) sgn_isAlmostWhiteColor
 {
-    return self.sgn_luminance > 0.64;
+    return self.sgn_luminance > 0.95;
 }
 
 - (BOOL) sgn_isVeryLightColor
@@ -234,14 +235,14 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
     return self.sgn_luminance > 0.87;
 }
 
-- (BOOL) sgn_isAlmostWhiteColor
+- (BOOL) sgn_isLightColor
 {
-    return self.sgn_luminance > 0.95;
+    return self.sgn_luminance > 0.64;
 }
 
 - (BOOL) sgn_isAlmostBlackColor
 {
-    return self.sgn_luminance < 0.002;
+    return self.sgn_luminance < 0.025;
 }
 
 @end
