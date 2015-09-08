@@ -9,6 +9,7 @@
 
 
 #import "UIColor+SGN_ColorPalette.h"
+#import <math.h>
 
 
 CGFloat sgn_getModifiedHueForShade(CGFloat baseHue, SGN_ColorPaletteShade shade)
@@ -171,6 +172,10 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
     // http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
     // http://en.wikipedia.org/wiki/Luma_(video)
     // Y = 0.2126 R + 0.7152 G + 0.0722 B
+    
+    r = r < 0.03928 ? r / 12.92 : powf((r + 0.055) / 1.055, 2.4);
+    g = g < 0.03928 ? g / 12.92 : powf((g + 0.055) / 1.055, 2.4);
+    b = b < 0.03928 ? b / 12.92 : powf((b + 0.055) / 1.055, 2.4);
     
     return r*0.2126f + g*0.7152f + b*0.0722f;
 }
