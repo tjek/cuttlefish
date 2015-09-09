@@ -28,7 +28,7 @@ CGFloat sgn_getModifiedHueForShade(CGFloat baseHue, SGN_ColorPaletteShade shade)
 }
 CGFloat sgn_getModifiedSaturationForShade(CGFloat baseSaturation, SGN_ColorPaletteShade shade)
 {
-    // lighter shade - decrease saturation
+    // brighter shade - decrease saturation
     if (shade < 500)
     {
         // get the saturation target @ 50:
@@ -58,9 +58,9 @@ CGFloat sgn_getModifiedSaturationForShade(CGFloat baseSaturation, SGN_ColorPalet
     }
 }
 
-CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPaletteShade shade)
+CGFloat sgn_getModifiedBrightnessForShade(CGFloat baseBrightness, SGN_ColorPaletteShade shade)
 {
-    CGFloat lightnessPercentage = 0;
+    CGFloat brightnessPercentage = 0;
     
     // We have modifier-percentages that map to shades.
     // Use this list to find the matching percentage, or lerp if the shade is not on a x100 bounds
@@ -89,27 +89,27 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
         CGFloat upperPercentage = [percentageRanges[upperIndex] floatValue];
         
         // lerp the index
-        lightnessPercentage = lowerPercentage + ((upperPercentage-lowerPercentage) / ((CGFloat)upperIndex-(CGFloat)lowerIndex)) * (indexFloat-(CGFloat)lowerIndex);
+        brightnessPercentage = lowerPercentage + ((upperPercentage-lowerPercentage) / ((CGFloat)upperIndex-(CGFloat)lowerIndex)) * (indexFloat-(CGFloat)lowerIndex);
     }
     else
     {
-        lightnessPercentage = lowerPercentage;
+        brightnessPercentage = lowerPercentage;
     }
     
     
-    // lighter shade
+    // brighter shade
     if (shade < 500)
     {
-        return baseLightness + ((1.0-baseLightness)*lightnessPercentage);
+        return baseBrightness + ((1.0-baseBrightness)*brightnessPercentage);
     }
     // darker shade
     else if (shade > 500)
     {
-        return baseLightness + (baseLightness*lightnessPercentage);
+        return baseBrightness + (baseBrightness*brightnessPercentage);
     }
     else
     {
-        return baseLightness;
+        return baseBrightness;
     }
 }
 
@@ -123,15 +123,15 @@ CGFloat sgn_getModifiedLightnessForShade(CGFloat baseLightness, SGN_ColorPalette
     if (shade == 500)
         return self;
     
-    CGFloat baseHue, baseLightness, baseSaturation, baseAlpha;
-    [self getHue:&baseHue saturation:&baseSaturation brightness:&baseLightness alpha:&baseAlpha];
+    CGFloat baseHue, baseBrightness, baseSaturation, baseAlpha;
+    [self getHue:&baseHue saturation:&baseSaturation brightness:&baseBrightness alpha:&baseAlpha];
     
     // generate new saturation
     CGFloat hue = sgn_getModifiedHueForShade(baseHue, shade);
     CGFloat sat = sgn_getModifiedSaturationForShade(baseSaturation, shade);
-    CGFloat light = sgn_getModifiedLightnessForShade(baseLightness, shade);
+    CGFloat bright = sgn_getModifiedBrightnessForShade(baseBrightness, shade);
     
-    UIColor* modifiedColor = [UIColor colorWithHue:hue saturation:sat brightness:light alpha:baseAlpha];
+    UIColor* modifiedColor = [UIColor colorWithHue:hue saturation:sat brightness:bright alpha:baseAlpha];
     return modifiedColor;
 }
 
