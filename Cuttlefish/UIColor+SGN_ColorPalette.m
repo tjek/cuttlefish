@@ -237,7 +237,7 @@ CGFloat sgn_getModifiedBrightnessForShade(CGFloat baseBrightness, SGN_ColorPalet
 
 - (BOOL) sgn_isLightColor
 {
-    return self.sgn_luminance > 0.64;
+    return self.sgn_luminance > 0.5;
 }
 
 - (BOOL) sgn_isAlmostBlackColor
