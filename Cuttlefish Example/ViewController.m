@@ -10,7 +10,7 @@
 
 #import "ColorPaletteTableViewCell.h"
 
-#import "UIColor+SGN_ColorPalette.h"
+#import "SGN_Cuttlefish.h"
 
 // for testing colors
 #import "UIColor+SGN_FlatColors.h"

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0A83A01C859F2800314B77 /* UIColor+SGN_ColorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0A839F1C859F2800314B77 /* UIColor+SGN_ColorUtilities.m */; };
+		AE0A83A21C85AA3D00314B77 /* UIColor+SGN_ColorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0A839F1C859F2800314B77 /* UIColor+SGN_ColorUtilities.m */; };
 		AE6685E11B9625B800B18EEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6685E01B9625B800B18EEC /* main.m */; };
 		AE6685E41B9625B800B18EEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6685E31B9625B800B18EEC /* AppDelegate.m */; };
 		AE6685E71B9625B800B18EEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6685E61B9625B800B18EEC /* ViewController.m */; };
@@ -18,7 +20,6 @@
 		AEECF07F1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF07E1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m */; };
 		AEECF0831B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */; };
 		AEECF0841B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */; };
-		AEECF08A1B998C2A0007C5D4 /* UIColor+SGN_Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */; };
 		AEECF08C1B99AA100007C5D4 /* CuttlefishLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEECF08B1B99AA0F0007C5D4 /* CuttlefishLogo.png */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE0A839D1C859ECB00314B77 /* SGN_Cuttlefish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGN_Cuttlefish.h; sourceTree = "<group>"; };
+		AE0A839E1C859F2800314B77 /* UIColor+SGN_ColorUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_ColorUtilities.h"; sourceTree = "<group>"; };
+		AE0A839F1C859F2800314B77 /* UIColor+SGN_ColorUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_ColorUtilities.m"; sourceTree = "<group>"; };
+		AE0A83A11C85A14D00314B77 /* Cuttlefish.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cuttlefish.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE6685DB1B9625B800B18EEC /* Cuttlefish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuttlefish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6685DF1B9625B800B18EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE6685E01B9625B800B18EEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,8 +57,6 @@
 		AEECF07E1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_FlatColors.m"; sourceTree = "<group>"; };
 		AEECF0811B99896F0007C5D4 /* UIColor+SGN_ColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_ColorPalette.h"; sourceTree = "<group>"; };
 		AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_ColorPalette.m"; sourceTree = "<group>"; };
-		AEECF0871B998C2A0007C5D4 /* UIColor+SGN_Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGN_Hex.h"; sourceTree = "<group>"; };
-		AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGN_Hex.m"; sourceTree = "<group>"; };
 		AEECF08B1B99AA0F0007C5D4 /* CuttlefishLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CuttlefishLogo.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -78,6 +81,7 @@
 		AE6685D21B9625B800B18EEC = {
 			isa = PBXGroup;
 			children = (
+				AE0A83A11C85A14D00314B77 /* Cuttlefish.podspec */,
 				AEECF0801B99896F0007C5D4 /* Cuttlefish */,
 				AE6685DD1B9625B800B18EEC /* Cuttlefish Example */,
 				AE6685F71B9625B800B18EEC /* CuttlefishTests */,
@@ -128,8 +132,6 @@
 			children = (
 				AE6685FA1B9625B800B18EEC /* CuttlefishTests.m */,
 				AE6685F81B9625B800B18EEC /* Supporting Files */,
-				AEECF0871B998C2A0007C5D4 /* UIColor+SGN_Hex.h */,
-				AEECF0881B998C2A0007C5D4 /* UIColor+SGN_Hex.m */,
 			);
 			path = CuttlefishTests;
 			sourceTree = "<group>";
@@ -145,6 +147,9 @@
 		AEECF0801B99896F0007C5D4 /* Cuttlefish */ = {
 			isa = PBXGroup;
 			children = (
+				AE0A839D1C859ECB00314B77 /* SGN_Cuttlefish.h */,
+				AE0A839E1C859F2800314B77 /* UIColor+SGN_ColorUtilities.h */,
+				AE0A839F1C859F2800314B77 /* UIColor+SGN_ColorUtilities.m */,
 				AEECF0811B99896F0007C5D4 /* UIColor+SGN_ColorPalette.h */,
 				AEECF0821B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m */,
 			);
@@ -195,7 +200,7 @@
 		AE6685D31B9625B800B18EEC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ShopGun;
 				TargetAttributes = {
 					AE6685DA1B9625B800B18EEC = {
@@ -255,6 +260,7 @@
 				AE6685E71B9625B800B18EEC /* ViewController.m in Sources */,
 				AE6685E41B9625B800B18EEC /* AppDelegate.m in Sources */,
 				AEECF0831B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */,
+				AE0A83A01C859F2800314B77 /* UIColor+SGN_ColorUtilities.m in Sources */,
 				AEECF07F1B9986A50007C5D4 /* UIColor+SGN_FlatColors.m in Sources */,
 				AE6685E11B9625B800B18EEC /* main.m in Sources */,
 				AE66860F1B97251500B18EEC /* ColorPaletteTableViewCell.m in Sources */,
@@ -266,8 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEECF0841B99896F0007C5D4 /* UIColor+SGN_ColorPalette.m in Sources */,
+				AE0A83A21C85AA3D00314B77 /* UIColor+SGN_ColorUtilities.m in Sources */,
 				AE6685FB1B9625B800B18EEC /* CuttlefishTests.m in Sources */,
-				AEECF08A1B998C2A0007C5D4 /* UIColor+SGN_Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +328,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,6 +397,7 @@
 				INFOPLIST_FILE = "Cuttlefish Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShopGun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -401,6 +409,7 @@
 				INFOPLIST_FILE = "Cuttlefish Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShopGun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -409,16 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CuttlefishTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShopGun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cuttlefish.app/Cuttlefish";
 			};
@@ -428,12 +434,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = CuttlefishTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ShopGun.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cuttlefish.app/Cuttlefish";
 			};

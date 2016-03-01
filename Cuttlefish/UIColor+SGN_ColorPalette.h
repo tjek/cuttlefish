@@ -30,36 +30,4 @@ typedef NS_ENUM(NSUInteger, SGN_ColorPaletteShade)
 // calculate a shade, where the receiver is the base (500) color
 - (UIColor*) sgn_colorForShade:(SGN_ColorPaletteShade)shade;
 
-
-
-// depending on the brightness of the color, either black or white text with varying alpha values
-// https://www.google.com/design/spec/style/color.html#color-ui-color-application
-@property (nonatomic, readonly) UIColor* sgn_primaryTextColor;
-@property (nonatomic, readonly) UIColor* sgn_secondaryTextColor;
-@property (nonatomic, readonly) UIColor* sgn_disabledTextColor;
-
-+ (UIColor*) sgn_primaryTextColorOnLight:(BOOL)lightBG;
-+ (UIColor*) sgn_secondaryTextColorOnLight:(BOOL)lightBG;
-+ (UIColor*) sgn_disabledTextColorOnLight:(BOOL)lightBG;
-
-
-
-
-
-
-- (CGFloat) sgn_luminance;
-
-- (BOOL) sgn_isEqualToColor:(UIColor *)otherColor;
-- (BOOL) sgn_isEqualToColor:(UIColor *)otherColor withTolerance:(CGFloat)tolerance;
-
-- (BOOL) sgn_isDarkerThanColor:(UIColor*)otherColor;
-- (BOOL) sgn_isLighterThanColor:(UIColor*)otherColor;
-
-// Based on the `sg_luminance`, and used by the `sgn_...TextColor` utilities
-// The tipping-point is tweaked to make text look good on backgrounds
-- (BOOL) sgn_isAlmostWhiteColor;
-- (BOOL) sgn_isVeryLightColor;
-- (BOOL) sgn_isLightColor;
-- (BOOL) sgn_isAlmostBlackColor;
-
 @end

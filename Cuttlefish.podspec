@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name     = 'Cuttlefish'
-  s.version  = '0.1'
-  s.summary      = 'Color extensions to generate color palette shades'
+  s.name         = 'Cuttlefish'
+  s.version      = '0.2'
+  s.summary      = 'Handy UIColor categories, including tools to generate color palette shades.'
 
   s.homepage     = 'https://github.com/shopgun/cuttlefish'
   s.license      = 'MIT'

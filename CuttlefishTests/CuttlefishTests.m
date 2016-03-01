@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#import "UIColor+SGN_ColorUtilities.h"
 #import "UIColor+SGN_ColorPalette.h"
-#import "UIColor+SGN_Hex.h"
 
 
 @interface CuttlefishTests : XCTestCase
@@ -25,7 +25,7 @@
     [super setUp];
     
     // taken from https://www.google.com/design/spec/style/color.html#color-color-palette
-    
+    // TODO: move these to a stand-alone uicolor set
     _testShades = [NSMutableDictionary new];
     
     _testShades[@"Red"] = @{
