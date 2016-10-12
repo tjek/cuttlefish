@@ -13,21 +13,23 @@
 
 CGFloat sgn_getModifiedHueForShade(CGFloat baseHue, SGN_ColorPaletteShade shade)
 {
+    CGFloat hue = baseHue;
+    
     // darker shade - decrease hue
     if (shade > 500)
     {
         CGFloat hueAt900 = (1.003*baseHue) - 0.016;
         
         // lerp shade 500->900
-        return ((hueAt900 - baseHue)/(900-500))*(shade-500) + baseHue;
+        hue = ((hueAt900 - baseHue)/(900-500))*(shade-500) + baseHue;
     }
-    else
-    {
-        return baseHue;
-    }
+    
+    return MIN(MAX(hue, 0), 1);
 }
 CGFloat sgn_getModifiedSaturationForShade(CGFloat baseSaturation, SGN_ColorPaletteShade shade)
 {
+    CGFloat sat = baseSaturation;
+    
     // brighter shade - decrease saturation
     if (shade < 500)
     {
@@ -36,7 +38,7 @@ CGFloat sgn_getModifiedSaturationForShade(CGFloat baseSaturation, SGN_ColorPalet
         CGFloat satAt50 = MAX((0.136 * baseSaturation) - 0.025, 0.0);
         
         // lerp shade 500->900
-        return ((baseSaturation - satAt50)/(500-50))*(shade-50) + satAt50;
+        sat = ((baseSaturation - satAt50)/(500-50))*(shade-50) + satAt50;
     }
     // darker shade - increase saturation
     else if (shade > 500)
@@ -50,12 +52,10 @@ CGFloat sgn_getModifiedSaturationForShade(CGFloat baseSaturation, SGN_ColorPalet
         CGFloat satAt900 = MIN((-1.019*baseSaturation*baseSaturation)+(2.283*baseSaturation)-0.281, 1.0);
         
         // lerp shade 500->900
-        return ((satAt900 - baseSaturation)/(900-500))*(shade-500) + baseSaturation;
+        sat = ((satAt900 - baseSaturation)/(900-500))*(shade-500) + baseSaturation;
     }
-    else
-    {
-        return baseSaturation;
-    }
+    
+    return MIN(MAX(sat, 0), 1);
 }
 
 CGFloat sgn_getModifiedBrightnessForShade(CGFloat baseBrightness, SGN_ColorPaletteShade shade)
@@ -97,20 +97,20 @@ CGFloat sgn_getModifiedBrightnessForShade(CGFloat baseBrightness, SGN_ColorPalet
     }
     
     
+    CGFloat brightness = baseBrightness;
+    
     // brighter shade
     if (shade < 500)
     {
-        return baseBrightness + ((1.0-baseBrightness)*brightnessPercentage);
+        brightness = baseBrightness + ((1.0-baseBrightness)*brightnessPercentage);
     }
     // darker shade
     else if (shade > 500)
     {
-        return baseBrightness + (baseBrightness*brightnessPercentage);
+        brightness = baseBrightness + (baseBrightness*brightnessPercentage);
     }
-    else
-    {
-        return baseBrightness;
-    }
+    
+    return MIN(MAX(brightness, 0), 1);
 }
 
 
